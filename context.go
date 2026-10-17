@@ -32,7 +32,7 @@ import "errors"
 //  │
 //  └── worker stops
 
-func createvm(ctx  context.Context) error {
+func createvm(ctx context.Context) error {
     for i:= 0; i<10; i++ {
         select {
             case  <-ctx.Done():

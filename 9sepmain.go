@@ -17,14 +17,14 @@ type  Virtual struct {
     payload string
 }
 
-func  (vm Kvm) create()  string {
-    return   vm.payload
+func (vm Kvm) create() string {
+    return vm.payload
 }
 func (vm  Virtual) create() string {
     return  vm.payload
 }
 
-func  create_Vm(vmc  VmEngine)  string {
+func  create_Vm(vmc VmEngine)  string {
     return  vmc.create()
 }
 
@@ -33,13 +33,14 @@ func  create_Vm(vmc  VmEngine)  string {
 
 func  Sqrt(value float64)(float64,  error) {
     if value < 0{
-        return  0,   errors.New("somethig erorr is therr") 
+        return  0, errors.New("somethig erorr is therr") 
     } else {
-        return  value, nil
+        return value, nil
     }  
 }
+
 func main() {
-    create_vm :=  Kvm{payload: "create vm"}
+    create_vm := Kvm{payload: "create vm"}
     create_virtual := Virtual{payload: "virtual vm"}
     fmt.Println(create_Vm(create_virtual))
     fmt.Println(create_Vm(create_vm))
@@ -47,9 +48,11 @@ func main() {
     var i interface{} = "hello"
     // var  data map[string]interface{}
     // data["aatish"] = "aatish"
-    // fmt.Println(data) 
+    // fmt.Println(data)
+     
     s :=  i.(string)
     fmt.Println("output of go lang", s)
+    
     // The Ok-idiom is a common pattern for handling errors.
     if s, ok := i.(string); ok {
         fmt.Println("string data: ", s)
