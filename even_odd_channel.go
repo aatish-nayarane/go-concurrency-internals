@@ -6,7 +6,7 @@ import "sync"
 func even(evench chan bool, oddch chan bool, wg *sync.WaitGroup) {
     // this will  be manage  even number using chan 
     defer  wg.Done()
-   
+       
     for i:= 0; i<10; i +=2 {
         <-evench
         fmt.Println("EvenchNumber")

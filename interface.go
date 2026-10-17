@@ -46,7 +46,6 @@ type CPUQuotaError struct {
     VMName  string
     RequestedCPU int
     AvailableCPU int
-
 }
 
 func (e CPUQuotaError) Error() string {
